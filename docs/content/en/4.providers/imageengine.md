@@ -43,7 +43,7 @@ In addition to the [standard modifiers](/components/nuxt-img#modifiers), you can
 * `inline`: `in` directive
 * `metadata`: `meta` directive
 
-> Note that the standard `quality` attribute is converted to the ImageEngine `cmpr` compression directive.  `quality` is the opposite of compression, so 80% quality equals 20% compression.  Since ImageEngine automatically adapts image quality the visitor's device, it is recommended that you do not explicitly set the quality.  If you want to completely disable all optimizations to an image, you should use `:modifiers="{ passThrough: 'true' }"`, which will serve the unaltered image.
+> Note that the standard `quality` attribute is converted to the ImageEngine `cmpr` compression directive.  `quality` is the opposite of compression, so 80% quality equals 20% compression.  Since ImageEngine automatically adapts image quality the visitor's device, browser and network quality, it is recommended that you do not explicitly set the quality.  If you want to completely disable all optimizations to an image, you should use `:modifiers="{ passThrough: 'true' }"`, which will serve the unaltered image.
 
 Example 1: Cropping an image to a width and height of 100x80, starting 10 pixels from the top and 20 pixels from the left:
 
@@ -77,6 +77,6 @@ ImageEngine automatically detects the best format and quality for your image bas
 
 This feature is very effective and it is not recommended that you disable it, but if you must, you can manually specify the format (ex: `format='webp'`) and quality (`quality='80`).
 
-### User-adjustable settings
+### ImageEngine settings
 
-ImageEngine allows you to set all of the modifiers/directives in the ImageEngine control panel using a feature called "User-Adjustable Settings".  This is a good place to set default adjustments since you can modify them without having to make changes to your Nuxt codebase.  If a directive is set in both Nuxt and the ImageEngine User-Adjustable Settings, the value in Nuxt takes priority.
+ImageEngine allows you to set all of the modifiers/directives in the ImageEngine control panel under advanced settings.  This is a good place to set default adjustments since you can modify them without having to make changes to your Nuxt codebase.  If a directive is set in both Nuxt and the ImageEngine User-Adjustable Settings, the value in Nuxt takes priority.
