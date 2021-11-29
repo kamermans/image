@@ -150,6 +150,25 @@ describe('Providers', () => {
     }
   })
 
+  test('imageengine compression', () => {
+    const providerOptions = {
+      baseURL: 'https://foo.bar.com'
+    }
+    const generated = imageengine.getImage(
+      '/test.jpg',
+      {
+        modifiers: {
+          width: 150,
+          quality: 0,
+        },
+        ...providerOptions
+      }, emptyContext
+    )
+    expect(generated).toMatchObject({
+      url: 'https://foo.bar.com/test.jpg?imgeng=/w_150/cmpr_99'
+    })
+  })
+
   test('unsplash', () => {
     const providerOptions = {
       baseURL: ''
