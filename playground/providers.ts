@@ -148,15 +148,15 @@ export const providers: Provider[] = [
     ]
   },
   // imageengine
-  // TODO: get an image with a permanent URL
   {
     name: 'imageengine',
     samples: [
       {
-        src: '//m2t2xum.cdn.imgeng.in/xiw8cqiwlcmb/43SX6HLJbFpiKJFUSAQztD/9ec21da9de67a69a6a9572f0c26310a3/Slow_Website_blog_Slow_Website_Horizotal.png',
+        src: '/images/image.jpg',
         width: 300,
         height: 300,
-        fit: 'inside'
+        fit: 'inside',
+        modifiers: { metadata: 'true', sharpen: 10 }
       }
     ]
   },
