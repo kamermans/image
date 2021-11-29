@@ -159,7 +159,7 @@ describe('Providers', () => {
       {
         modifiers: {
           width: 150,
-          quality: 0,
+          quality: 0
         },
         ...providerOptions
       }, emptyContext
